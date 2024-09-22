@@ -9,7 +9,7 @@ function SignUp({ setUser }) {
   const [error, setError] = useState(null);
 
   function handleSignUp() {
-    fetch("/signup", {
+    fetch("https://SamCodeCraft.github.io/Pesabank-frontend/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
