@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Pesabank-frontend/static/css/main.1e3e273d.css",
+    "main.js": "/Pesabank-frontend/static/js/main.0965fbd5.js",
+    "static/media/pexels-karolina-grabowska-4968385.jpg": "/Pesabank-frontend/static/media/pexels-karolina-grabowska-4968385.1f141eb18998d4dc12f9.jpg",
+    "static/media/pexels-shvetsa-3943949.jpg": "/Pesabank-frontend/static/media/pexels-shvetsa-3943949.bdc697daa25e7b50936f.jpg",
+    "static/media/pexels-pixabay-50987.jpg": "/Pesabank-frontend/static/media/pexels-pixabay-50987.fcf83e6c639364959db3.jpg",
+    "static/media/pexels-maitree-rimthong-444156-1602726.jpg": "/Pesabank-frontend/static/media/pexels-maitree-rimthong-444156-1602726.6f992e8155cc76e43231.jpg",
+    "static/media/Subscription-Services-657x432.jpg": "/Pesabank-frontend/static/media/Subscription-Services-657x432.721eb3bfeaae93775f9d.jpg",
+    "index.html": "/Pesabank-frontend/index.html",
+    "main.1e3e273d.css.map": "/Pesabank-frontend/static/css/main.1e3e273d.css.map",
+    "main.0965fbd5.js.map": "/Pesabank-frontend/static/js/main.0965fbd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e3e273d.css",
+    "static/js/main.0965fbd5.js"
+  ]
+}
