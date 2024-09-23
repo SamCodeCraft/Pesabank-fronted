@@ -19,15 +19,14 @@ function SignUp({ setUser }) {
         password,
       }),
     })
-      .then((response) => {
+      .then(async (response) => {
         console.log("Response status:", response.status);
         if (!response.ok) {
           if (response.status === 409) {
             setError("Username already exists. Please log in.");
           } else {
-            return response.text().then(text => {
-              throw new Error(`Network response was not ok: ${response.status} ${text}`);
-            });
+            const text = await response.text();
+            throw new Error(`Network response was not ok: ${response.status} ${text}`);
           }
         }
         return response.json();
