@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# PesaBank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PesaBank is a modern, full-featured banking solution designed to provide users with seamless financial management. This application empowers users to manage their bank accounts, process transactions, apply for loans, and monitor their savings with ease. Built using React for the frontend and Flask for the backend, PesaBank offers a highly interactive and user-friendly experience while ensuring data security and reliability.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [API Documentation](#api-documentation)
+- [Installation Guide](#installation-guide)
+  - [Prerequisites](#prerequisites)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Running the Application](#running-the-application)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact Information](#contact-information)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+PesaBank aims to redefine digital banking with a simple and intuitive interface that supports multiple financial services. Whether it's making payments, checking balances, or applying for loans, PesaBank provides a comprehensive platform that is secure, scalable, and easy to use.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project highlights the core functionality of a banking system, featuring a robust backend for managing transactions and a dynamic frontend to ensure users can easily interact with the platform.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **User Authentication:** Secure sign-up and login system with two-factor authentication.
+- **Account Management:** Create, view, and manage bank accounts with detailed transaction histories.
+- **Deposit & Withdrawal:** Seamlessly deposit or withdraw funds from accounts.
+- **Loan Application:** Users can apply for loans, track their status, and view repayment schedules.
+- **Savings Tracker:** Manage savings accounts and monitor progress over time.
+- **Responsive Design:** The platform is fully responsive and accessible on all device types.
+- **Detailed Transaction Logs:** View and export past transactions, filtered by date or type.
+- **Notifications:** Get notified of important account activities like low balance alerts or loan approvals.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+PesaBank leverages a modern tech stack to provide both frontend and backend functionality:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Frontend:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React.js:** JavaScript library for building user interfaces.
+- **React Router:** For managing application routes and navigation.
+- **Redux:** For state management.
+- **Axios:** For handling HTTP requests to the backend API.
 
-### `npm run eject`
+**Backend:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Flask:** Lightweight web framework for Python.
+- **Flask-RESTful:** For building RESTful APIs.
+- **SQLAlchemy:** Object-relational mapping (ORM) tool for interacting with the database.
+- **PostgreSQL:** Relational database management system used to store account and transaction data.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Testing:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Jest:** For unit testing React components.
+- **PyTest:** For backend unit testing in Flask.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**CI/CD Tools:**
 
-## Learn More
+- **GitHub Actions:** Automating testing and deployment pipelines.
+- **Docker:** For containerization and ensuring consistency across environments.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## API Documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+PesaBank’s backend API provides multiple endpoints for interacting with the banking system. Below is a summary of the main API endpoints:
 
-### Code Splitting
+| HTTP Method | Endpoint                     | Description                                  |
+| :---------- | :-------------------------- | :------------------------------------------- |
+| POST        | /api/auth/register          | Register a new user account                  |
+| POST        | /api/auth/login             | Login a user and generate an authentication token |
+| GET         | /api/accounts                | Get all bank accounts for the logged-in user |
+| POST        | /api/transactions           | Create a new transaction (deposit/withdrawal) |
+| GET         | /api/loans                   | View user’s loan applications                |
+| POST        | /api/loans/apply            | Apply for a new loan                         |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For full API documentation, refer to the Swagger API Documentation hosted at /api/docs.
 
-### Analyzing the Bundle Size
+## Installation Guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Follow these steps to set up the project locally:
 
-### Making a Progressive Web App
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Ensure you have the following installed:
 
-### Advanced Configuration
+- Node.js
+- Python
+- PostgreSQL
+- Docker (optional, for containerization)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Backend Setup
 
-### Deployment
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+git clone https://github.com/your-username/pesabank.git
+cd pesabank
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+PesaBank is licensed under the MIT License.
+
+## Contact Information
+
+For inquiries or support, please reach out via:
+
+- Email: siyajalis@gmail.com
+- LinkedIn: [Samuel Siyajari](linkedin.com/in/samuel-siyajari-970365167) 
+
+- GitHub: [PesaBank Repository](https://github.com/SamCodeCraft/Pesabank-frontend) 
