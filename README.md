@@ -90,14 +90,6 @@ Ensure you have the following installed:
 - PostgreSQL
 - Docker (optional, for containerization)
 
-### Backend Setup
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/pesabank.git
-cd pesabank
-
 
 ## License
 
